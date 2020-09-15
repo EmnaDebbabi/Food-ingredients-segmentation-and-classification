@@ -169,7 +169,7 @@ for rand_num in rand_image_nums:
 ```
 #
 <img src="images/5.PNG" width="" height=""> </br>
-<img src="images/6.png" width="" height=""> </br>
+<img src="images/6.PNG" width="" height=""> </br>
 #
 #### Loading and Cleaning Data
 Before the model fitting process, we use the coco library and tensorflow image reading functions to read in the images, read in their associated segmentations and save them to a tensor.
@@ -457,7 +457,7 @@ print('The percent of Y that is 0 class is: '+str(count_values[0]/total_size))
 print('The percent of Y that is 1 class is: '+str(count_values[1]/total_size))
 print('The percent of Y that is 40 class is: '+str(count_values[40]/total_size))
 ```
-<img src="images/8.png" width="" height=""> </br>
+<img src="images/8.PNG" width="" height=""> </br>
 ```
 #iterating through each class
 j=0
@@ -519,7 +519,7 @@ def weightedLoss(originalLossFunc, weightsList):
 weights = class_weights.values()
 weights
 ```
-<img src="images/9.png" width="" height=""> </br>
+<img src="images/9.PNG" width="" height=""> </br>
 #### Training Model
 Here, we compile and fit the model.
 ```
@@ -545,7 +545,7 @@ model_history = model.fit(x = X,
                           validation_split = 0.25,
                           y = Y, epochs=10)
 ```
-<img src="images/10.png" width="" height=""> </br>
+<img src="images/10.PNG" width="" height=""> </br>
 #### Plotting model history:
 ```
 # A plotting function you can reuse
@@ -579,7 +579,7 @@ def plot(history):
 plot(model_history)
 
 ```
-<img src="images/11.png" width="" height=""> </br>
+<img src="images/11.PNG" width="" height=""> </br>
 #### Making Predictions
 ```
 
@@ -613,13 +613,13 @@ plot_prediction(i = 34, show = False, category = 1085, return_val = True)
 
 
 ```
-<img src="images/12.png" width="" height=""> </br>
+<img src="images/12.PNG" width="" height=""> </br>
 
 ```
 plot_prediction(i = 34, show = True, category = 1085, return_val = False,show_all_classes = True)
 
 ```
-<img src="images/13.png" width="" height=""> </br>
+<img src="images/13.PNG" width="" height=""> </br>
 
 
 ```
@@ -627,14 +627,14 @@ import pandas as pd
 pd.DataFrame(pred.argmax(axis = 2)).to_csv('test.csv')
 plot_prediction(i = 30, show = False, category = 0)
 ```
-<img src="images/14.png" width="" height=""> </br>
+<img src="images/14.PNG" width="" height=""> </br>
 ```
 plot_prediction(i = 30, show = True, category = 0, show_all_classes=True)
 ```
-`
-<img src="images/15.png" width="" height=""> </br>
-`
-<img src="images/16.png" width="" height=""> </br>
+
+<img src="images/15.PNG" width="" height=""> </br>
+
+<img src="images/16.PNG" width="" height=""> </br>
 ```
 
 ```
