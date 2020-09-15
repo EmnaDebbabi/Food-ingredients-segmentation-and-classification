@@ -166,8 +166,6 @@ for rand_num in rand_image_nums:
 
   plot_image(coco.getImgIds()[rand_num])
 ```
-<img src="images/5.png" width="" height=""> </br>
-<img src="images/6.png" width="" height=""> </br>
 #### Loading and Cleaning Data
 Before the model fitting process, we use the coco library and tensorflow image reading functions to read in the images, read in their associated segmentations and save them to a tensor.
 </br>
