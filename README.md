@@ -72,4 +72,45 @@ Please get in touch if you have any ideas! </br>
 I was inspired by this blog post for Image segmentation: <a href="https://www.analyticsvidhya.com/blog/2019/07/computer-vision-implementing-mask-r-cnn-image-segmentation/" >implementing mask r-cnn image segmentation </a></br>
 and a related script I found on github that belongs to Keras too: <a href="https://keras.io/guides/transfer_learning/">keras-finetuning</a></br>
 ## Experiment
-Since you can not see the results in the jupyter notebook due to its size unless you download it and open it with either anaconda or colab i will put some results below :
+Since you can not see the results in the jupyter notebook due to its size unless you download it and open it with either anaconda or colab i will put some results below : </br>
+### Importing Libraries </br>
+We import keras, tensorflow_examples, and tensorflow for the deep learning process, google.colab to access files, matplotlib to plot files, numpy for computation and os for checking for files. Additionally, since the annotations are in the coco format, we install coco library to read and access the files.</br>
+```bash
+#installing coco library
+!pip install git+https://github.com/AIcrowd/coco.git#subdirectory=PythonAPI
+```
+```bash
+#installing library for pix2pix
+!pip install git+https://github.com/tensorflow/examples
+```
+```bash
+%tensorflow_version 2.x
+import tensorflow as tf
+```
+```bash
+#model fitting
+from keras import backend as K
+from tensorflow_examples.models.pix2pix import pix2pix
+
+#accessing data on drive
+from google.colab import drive
+
+#plotting
+import matplotlib.image as mpimg
+import matplotlib.pyplot as plt
+
+#computation
+import numpy as np
+
+#reading and accessing coco formatted data
+from pycocotools.coco import COCO
+from pycocotools import mask as cocomask
+
+#file checking
+import os
+
+#mounting drive
+drive.mount('/content/drive')
+```
+####Loading in Data </br>
+Here we use the coco libaries to read the jsons and access the files.
