@@ -411,7 +411,7 @@ model = unet_model(41)
 #showing architecture
 tf.keras.utils.plot_model(model, show_shapes=True)
 ```
-<img src="images/7.png" width="" height=""> </br>
+<img src="images/7.PNG" width="" height=""> </br>
 
 #### Creating Weights for Model and Custom Loss Function
 Since there are a considerably more pixels of class 0 (no food class) than all the other classes combined, we must reweight all the classes to prevent the model from simply predicting every pixel as class 0. Since there is no way in base tensorflow or keras to weight multiclass models that have more than 3 classes, we must create a custom loss function.
