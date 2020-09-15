@@ -168,7 +168,7 @@ for rand_num in rand_image_nums:
   plot_image(coco.getImgIds()[rand_num])
 ```
 #
-<img src="images/5.png" width="" height=""> </br>
+<img src="images/5.PNG" width="" height=""> </br>
 <img src="images/6.png" width="" height=""> </br>
 #
 #### Loading and Cleaning Data
