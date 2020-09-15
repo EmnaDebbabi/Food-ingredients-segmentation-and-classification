@@ -156,38 +156,6 @@ def plot_image(image_id):
   #showing the results
   plt.show()
 ```
-```python
-#given an image_id, plot the image and mask
-def plot_image(image_id):
-
-  #reading image
-  img = mpimg.imread(ADLFolderLocation  + 'train_images/' + 
-                        (6 - len(str(image_id))) * str(0) +
-                             str(image_id) + '.jpg')
-  
-  #displayin image
-  imgplot = plt.imshow(img)
-
-  #loading image id
-  anns_ids = coco.getAnnIds(imgIds = image_id)
-  anns = coco.loadAnns(anns_ids)
-  
-  #iterating through annotations
-  for i in range(len(anns)):
-
-    #picking a different color for each annotation
-    col = ['b', 'g', 'r', 'c', 'm', 'y', 'k'][i]
-
-    ann = anns[i]
-
-    #plotting the segmentation
-    for seg in ann['segmentation']:
-        plt.fill(seg[0::2],
-               seg[1::2], col, alpha = 0.4)
-        
-  #showing the results
-  plt.show()
-```
 
 ```
 #plotting a few random images
